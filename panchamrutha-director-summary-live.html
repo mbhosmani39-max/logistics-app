@@ -116,7 +116,7 @@ if(firebaseOK){
   try{
     firebase.initializeApp(firebaseConfig);
     db = firebase.firestore();
-    db.settings({ experimentalForceLongPolling: true, merge: true });
+    db.settings({ experimentalForceLongPolling: true, experimentalAutoDetectLongPolling: false });
   }catch(e){ firebaseOK = false; console.error('Firebase init failed', e); }
 }
 
